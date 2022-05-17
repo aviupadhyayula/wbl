@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "heartschat-prod-a505",
+  "private_key_id": "de929d9944279e228d769ab3d14e72479a38832f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDqnAqDXxthUEox\nvCM6bvTKPiGOd/ff3ygxxflNh3cIedNP/1g08il9TnDh15O5HmK52ZsXUULGKVCQ\njQzScVI18eIBufyl748nydC+ds1xNMOEx0lmN0OM8a3cecoOPBzaG7PHQpb9rozp\ndJB8W9ngRwKSn18kGdbdKCt46DIx8/IBM5v8+kGeX5dosETxwzdKN3YNDcdmbRaj\nfoYtiSmTciAGgdnQzSyoMHng48E/fbN6YzcWmDCLtUm2MAlCOXWD6hJizNFRH3gP\n5ng0PEePtM85U7PAqHGdxRACEGJ3mCNgl8ph7ubDby9B99waCGeAVd1W4QB+RHR9\nHrCDWgg3AgMBAAECggEAQ+zKtG9wT3P+Dzk/39apI/bqI0QDrbr/+a0ueW5rnbYb\n4rD0uluUfJWd5B1UxUeRYOqqVw1tbk8e5sMXv8QUf87Y1xQgnHBn+6aYO9TMtWaH\n5yUF0MTWV3PPmSJfyFBKMDHOErZqXedQH/ViMccsJR2aFpZy5tJeXaiYMYjUo5ZF\n7icU7OhU1IEDf2c5RvHNd5ZNrCyuU86wj2+NeZrfSP5ZrwhPED/31BCHGbg155Bl\ncIzT5PkZJBJBgoaCkqvC+dHxwiZUq61B6d6pwTUMex5h0jMLxm4q7UEk4gNlxObb\nVUXuRXBxQbxVL5g27l0hPd/yQTsQTknlFxiCLNmy3QKBgQD+AK0Zc5ei0QRnzGCU\nn7No2WYP/HJXl+nCtwKrvsISpwMR/UeuvAZ5wmClaTxLb21X8a0wD/noHLLx15ln\n48DBkbTv6JZ7EXzWfOhfPrQBQQCZ6x/kg9u0h2byMZt5ayEd+ixphwOy161uDH5B\n5dB/hR9YPcF5lz5GRVXYWl3F7QKBgQDsdFNH0FQPOYkVxKfO1jMDsbyf5BfN1n/6\nFkQv9H807l44r2fdGsQe7srlf1jVyiaC0qYyET5A6pojZyG+LaWdd7rrELm47yal\nqRWXfl5kwZMspISV0Ra8fPAi4pRBNO6OIYGt/wiNM1DshnezHZJTpU7l2GtBgmgJ\nw2H+J6bCMwKBgD30CkSH9jdnRezPY8s8fLUZOZSynW0SB5lPrB4Z5BpKlCwiHAbZ\no7a1G3+dAHDh18i4kOaFLw5XWao1TRyS56QPFxPhJjsUU9+5DbCVibA4m53vRJMn\nOkJ5ODngsaxW3fgC2ixPGy7W/l02POFz3XwNC00pmvQ+WJkpNjwUJoUtAoGBALdS\n3Pqxp2qCZilNZfk0EytLEv44PshlBKXlu4oemr10DfMO84z2YpXE9+QE3uAqMb9+\nCEKLIeP8v/Kw0/V5uIyktnPnbMbYC/Oma0ogPJkLh8q15uGs0V7j0t6JIv6HRmlF\nyyAWug+XeKdY/dcOF1Pot4n2R/nrXDQtmn0NSvoHAoGBAMI6xnAYl5w7ivyqY5wb\n+aN/TATu7caspcOLahh/4If3xCvcfEgvcJRNhrNmDuYMstOgkYX1JWl+00hBKK4c\n7dZupZycW+Hv73ArBJLrgdXNS9WAzPaYBw8eX2z2WkhbRdoudqPBJo4G8Dl6tAK2\n2YevuPvtYoVWFTLcpIzSJSWO\n-----END PRIVATE KEY-----\n",
+  "client_email": "development@heartschat-prod-a505.iam.gserviceaccount.com",
+  "client_id": "112551168837284715312",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/development%40heartschat-prod-a505.iam.gserviceaccount.com"
+}
