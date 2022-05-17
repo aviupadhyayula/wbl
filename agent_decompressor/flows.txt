@@ -1,0 +1,46 @@
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000"
+display_name: "Default Start Flow"
+description: "A start flow created along with the agent"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/00000000-0000-0000-0000-000000000000"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Hello, I was hoping to take another look at the Jim Brine piece. Could you tell me a bit more about it?"
+      }
+    }
+  }
+  target_page: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/pages/df20b17b-91ed-48df-9465-27eb234f21e5"
+  name: "d0b998fc-429f-4e55-ab39-e2dc22e97632"
+}
+event_handlers {
+  target_page: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/pages/df20b17b-91ed-48df-9465-27eb234f21e5"
+  event: "sys.no-match-default"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I don\'t follow.. but would love to hear more about the Hearts series"
+      }
+    }
+  }
+  name: "79db7129-d951-43e0-a6ba-7f05bc8b2444"
+}
+event_handlers {
+  target_page: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/pages/df20b17b-91ed-48df-9465-27eb234f21e5"
+  event: "sys.no-input-default"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "if you leave, I get the painting free :)"
+        text: "you still here?"
+        text: "U there?"
+        text: "you leave?"
+      }
+    }
+  }
+  name: "0be95c74-231c-49f3-bb12-f9b4ea6f362b"
+}
+nlu_settings {
+  model_type: MODEL_TYPE_STANDARD
+  classification_threshold: 0.30000001192092896
+}
