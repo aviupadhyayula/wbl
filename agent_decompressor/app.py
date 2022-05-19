@@ -1,32 +1,49 @@
-from google.cloud import dialogflowcx_v3 as dialogflow
+from google.cloud import dialogflowcx_v3
 import asyncio
-import csv
+from openpyxl import Workbook
 
-AGENT = "projects/{}/locations/us-central1/agents/{}".format("heartschat-prod-a505", "37dd682b-aa44-48eb-bffc-86e80b93e38c")
-ENDPOINT = "us-central1-dialogflow.googleapis.com"
+# export GOOGLE_APPLICATION_CREDENTIALS="heartschat-prod-a505-de929d994427.json"
+
+PROJECT_ID = "heartschat-prod-a505"
+AGENT_ID = "37dd682b-aa44-48eb-bffc-86e80b93e38c"
+LOCATION_ID = "us-central1"
+ENDPOINT_ID = "us-central1-dialogflow.googleapis.com"
+FLOW_ID = "00000000-0000-0000-0000-000000000000"
+AGENT = "projects/{}/locations/{}/agents/{}".format(PROJECT_ID, LOCATION_ID, AGENT_ID)
+FLOW = "{}/flows/{}".format(AGENT, FLOW_ID)
 
 async def get_intents():
-    client = dialogflow.IntentsAsyncClient(client_options={"api_endpoint": ENDPOINT})
+    client = dialogflowcx_v3.IntentsAsyncClient(client_options={"api_endpoint": ENDPOINT_ID})
     request = dialogflow.ListIntentsRequest(parent=AGENT)
-    page_result = await client.list_intents(request=request)
-    # with open('intents.csv', 'w') as f:
-    #     writer = csv.writer(f)
-    #     async for response in page_result:
-    #         writer.writerow(response['display_name'])
-    #         writer.writerow(response['training_phrases'])
-    with open('intents.txt', 'w') as f:
-        async for response in page_result:
-            f.write(str(response))
+    intents = await client.list_intents(request=request)
+    return intents
+
+async def write_intents(intents):
+    workbook = Workbook()
+    sheet = workbook.active
+    row = 1
+    async for intent in intents:
+        display_name = display_name.replace("?", "")
+        sheet["A{}".format(row)] = intent.display_name
+        intent_sheet = workbook.create_sheet(intent.display_name)
+        sub_row = 1
+        for phrase in intent.training_phrases:
+            phrase_text += [part.text for part in phrase.parts]
+            intent_sheet["A{}".format(sub_row)] = phrase_text
+            sub_row += 1
+        row += 1
+    workbook.save(filename="dialog_map.xlsx")
 
 async def get_flows():
-    client = dialogflow.FlowsAsyncClient(client_options={"api_endpoint": ENDPOINT})
-    request = dialogflow.GetFlowRequest(name=AGENT + "/flows/00000000-0000-0000-0000-000000000000")
-    response = await client.get_flow(request=request)
-    with open('flows.txt', 'a') as f:
-        f.write(str(response))
+    client = dialogflowcx_v3.FlowsAsyncClient(client_options={"api_endpoint": ENDPOINT_ID})
+    request = dialogflowcx_v3.GetFlowRequest(name=FLOW)
+    flow = await client.get_flow(request=request)
+    with open('flows.txt', 'w') as f:
+        f.write(str(flow))
 
 def main():
-    asyncio.run(get_intents())
-    # asyncio.run(get_flows())
+    # intents = asyncio.run(get_intents())
+    # asyncio.run(write_intents(intents))
+    asyncio.run(get_flows())
 
 main()
