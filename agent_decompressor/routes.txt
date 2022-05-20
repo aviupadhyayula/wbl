@@ -1,0 +1,1536 @@
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/1276acc4-5ecb-41f8-87de-bcd1fb5e237a"
+display_name: "Other_Brine_pieces"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/d7f02fa4-2074-4507-aff8-d4a0920f40b7"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "This would be my first Brine.  I\'ve been interested in finding his work for a while."
+      }
+    }
+  }
+  name: "234b3ff8-1151-41b3-b31e-f573b679623c"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/dd39269d-2fc4-40c3-8310-49b0962197cb"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "any idea if other pieces of his will be available soon?"
+      }
+    }
+  }
+  name: "907c77ac-5194-4d17-9e03-5d737a0f276f"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/b026bbf0-8118-4325-a1fd-a937fba4dd44"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I\'m really glad to have happened upon this piece"
+      }
+    }
+  }
+  name: "c64763ff-985d-4b05-a0bc-005758a25b1d"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/26b76469-185d-4f6a-92b2-c8b5e43b27e9"
+display_name: "Greetings"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/dca73282-4d03-44c2-91c9-a073cb8f172b"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "See you soon!"
+        text: "Bye-bye!"
+        text: "Till next time!"
+        text: "Bye."
+      }
+    }
+  }
+  target_page: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/pages/END_SESSION"
+  name: "24143f04-1cb2-4bee-ba9c-ef804991142b"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/b56f10cd-29b4-4b9f-98f5-afb73d1ad913"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Good evening! How is your day going?"
+        text: "Good evening! How\'s the day treating you so far?"
+        text: "Good evening! How\'s your day been?"
+      }
+    }
+  }
+  name: "575daf8b-5158-46da-8cf3-a414dfeaf828"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/deb24824-d38f-43ce-8938-760b4f55ea12"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "How are you this morning?"
+        text: "How\'s the morning treating you so far?"
+        text: "Good morning! How are you today?"
+      }
+    }
+  }
+  name: "81450d0a-f5e4-46c2-bb19-41e624c214b0"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/0e1892d8-af4d-44eb-b6c5-43535ef70ee7"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Sleep tight!"
+        text: "Have a good one!"
+        text: "Talk to you soon!"
+      }
+    }
+  }
+  target_page: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/pages/END_SESSION"
+  name: "0ef1e4d2-099d-4485-a38f-c146ffe4b92e"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/9832593b-3df1-4702-a763-429550d8fa1c"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Hi there, friend!"
+        text: "Hi!"
+        text: "Hey!"
+        text: "Hey there!"
+        text: "Good day!"
+        text: "Hello!"
+        text: "Greetings!"
+      }
+    }
+  }
+  name: "b103c5ee-7334-4998-bca7-4031872027c5"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/b8ae8f69-930b-4325-8941-8b3b111ab756"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Doing great, thanks."
+        text: "I\'m doing very well. Thanks!"
+        text: "Feeling wonderful!"
+        text: "Wonderful! Thanks for asking."
+      }
+    }
+  }
+  name: "c1b44e60-0702-41ea-9462-d30f2a75310a"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/5d38e528-574d-4b35-b3cd-33a8f767a801"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "It\'s nice meeting you, too."
+        text: "Likewise. I\'m looking forward to helping you out.\n"
+        text: "Nice meeting you, as well.\n"
+        text: "The pleasure is mine."
+      }
+    }
+  }
+  name: "5883c25a-b14e-42d3-ba11-d8c154947f19"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/fdb31f40-c9cc-48c4-ad8d-8caac7a7a582"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Likewise!"
+        text: "So glad we meet again!"
+        text: "Same here. I was starting to miss you."
+      }
+    }
+  }
+  name: "af2290cb-d0b3-4228-96dd-c2f9d539f679"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/fb55717b-d3d0-419b-9c3b-07cb7196ac0c"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "It sure was. We can chat again anytime."
+        text: "I enjoy talking to you, too."
+        text: "You know I\'m here to talk anytime."
+      }
+    }
+  }
+  target_page: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/pages/END_SESSION"
+  name: "82bc9e49-aede-404c-8e1e-ce009f6d5c40"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/b274aa2f-ecf0-4be4-aa60-412adc6d54e9"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Not a whole lot. "
+        text: "Not much. "
+        text: "Just here, waiting to help someone."
+      }
+    }
+  }
+  name: "fb2229aa-f3d5-4df7-947e-62562aaee0c3"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/2a4ceb93-1914-45d8-9729-5a33d7e57c84"
+display_name: "Rarity"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/4f359624-64e9-450a-a13e-5c3689a571d0"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Oh is it? I thought I saw another Brine had been sold at auction not too long ago?"
+      }
+    }
+  }
+  name: "b80c9b03-935a-4b10-8706-932821dda5d0"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/2f0609bf-8933-40a2-8041-f6e3c23ef00b"
+display_name: "Artist: Jim Brine"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/ec906fd7-8dc8-4da4-84c4-4bb74ac15032"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I saw that in the news, such a loss. Shame he won\'t be painting anymore pieces."
+      }
+    }
+  }
+  name: "beebbc81-b973-4b66-b8e6-ab7a7a5b694a"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/f2db6a54-14ad-4bf3-ac36-564c2de8b37e"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I\'ve seen a few of his other pieces. he\'s a fantastic artist"
+      }
+    }
+  }
+  name: "6e24b083-41fa-4aa1-b5ae-ba6b60b8f59f"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/05977c52-e4f9-4a8b-a34e-80bfe3f036bd"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "He make anything I would have heard of?"
+      }
+    }
+  }
+  name: "4952244e-84fa-4cb0-b1a3-7bc4df5918bd"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/8a24e854-2884-4569-9a5d-c45e863406d2"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "What\'s he known for?"
+      }
+    }
+  }
+  name: "eefe17d0-e912-489c-90fb-1998c487959c"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/3fac6052-4c29-48a2-93b4-4904747b6053"
+display_name: "Past owners"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/ee0c9c7a-fd08-491d-8f2f-40f33ab8d21b"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Would love to find out more about that. I like knwing a pieces history "
+      }
+    }
+  }
+  name: "bb84fa99-e8ad-4f7a-bff6-c094f3d0889f"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/5639d4b5-2d48-4f95-a56a-4ddee3408856"
+display_name: "quality"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/a966857c-f560-495b-985a-77d5ca44590e"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Many believe it\'s one of his best!"
+      }
+    }
+  }
+  name: "2a599f3f-ea48-4059-8b12-e91f79e1d932"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/625d5f27-314e-45dd-a24b-1500c6701df8"
+display_name: "Confirmation"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/e66e8330-cf20-4f98-a943-7f2e1b05e4ef"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "OK, that is forgotten now."
+        text: "Okay, cancelled."
+        text: "Alright, cancelled."
+      }
+    }
+  }
+  name: "cfe09c26-f489-4c7e-bec0-f2fb76e6be75"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/fc0243c8-36db-41e6-be72-1034e3f353bf"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Understood."
+        text: "Okay."
+        text: "I see."
+        text: "I understand."
+        text: "Okay then."
+      }
+    }
+  }
+  name: "0381aa5a-8866-47a4-a788-74c234eddb28"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/aa4c42e1-f734-4c74-a177-8dc8c7234249"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "okay, great"
+      }
+    }
+  }
+  name: "75af599d-5cc2-4588-9829-33e7f1f772ce"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/847e9eae-70fe-4083-a58f-3174649bc1f9"
+display_name: "Bargaining"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/d3437896-e04b-4c5f-9dc6-769705da69a4"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "yes, would you sell for 7,000?"
+      }
+    }
+  }
+  name: "6481b8b3-f4f1-48e1-9395-7583cd77a817"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/00daadaf-1b7a-4f92-b7ca-e02b04c00047"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I was thinking $7000."
+      }
+    }
+  }
+  name: "2bbdfa94-5eb4-4c55-b034-b852c0366fb9"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/da2c30e8-6929-4d33-a694-573481e794c1"
+  condition: "$intent.params.number.resolved > 14000"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "That\'s much too high.."
+        text: "That\'s a lot more than I was thinking"
+        text: "That\'s more than I am able to spend"
+      }
+    }
+  }
+  name: "b4719853-c502-4569-843f-940e778fd495"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/da2c30e8-6929-4d33-a694-573481e794c1"
+  condition: "$intent.params.number.resolved = 14000"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I can\'t go that high. What about $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))??"
+        text: "That\'s too high... I\'ll throw out $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))??"
+        text: "That\'s too much. I can offer $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?."
+        text: "That\'s too high. Would you take $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))??"
+        text: "I can\'t spend that much. How about $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))??"
+        text: "That\'s more than I was thinking. Would you take $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))??"
+        text: "That\'s a lot more than I\'d hoped. What about $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))??"
+      }
+    }
+  }
+  name: "44c30b1b-b805-4414-b795-8def88dcb835"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/da2c30e8-6929-4d33-a694-573481e794c1"
+  condition: "$intent.params.number.resolved >= 13000 AND $intent.params.number.resolved < 14000"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "That\'s out of my range. What aobut $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "That\'s more than I can do. How about $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "That\'s more than I was thinking. Could you do $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "That\'s out of my budget. I was thinking $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "That\'s too high. Would you take $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+      }
+    }
+  }
+  name: "706e6a90-1d36-49c9-8bfe-f3d9c0a649db"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/da2c30e8-6929-4d33-a694-573481e794c1"
+  condition: "$intent.params.number.resolved >= 12000 AND $intent.params.number.resolved < 13000"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I don\'t think I can go that high.. maybe $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "That\'s more than I was thinking. How about $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "I can\'t go that high. Would you sell it for $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "That\'s pretty high. I was thinking $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "That\'s too much for me, but I could do $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+      }
+    }
+  }
+  name: "2663e27e-7c9e-47f2-a4e5-3298219c904b"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/da2c30e8-6929-4d33-a694-573481e794c1"
+  condition: "$intent.params.number.resolved >= 11000 AND $intent.params.number.resolved < 12000"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "That\'s a bit too high for me, but I could do $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "That\'s a bit too high for me. Could you do $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "That\'s a little high for me. How about $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "That\'s a bit high for me. I was thinking $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "That\'s a little high for me. Would you sell it for $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+      }
+    }
+  }
+  name: "b9b0d1e9-bdd9-4340-8e1d-49510306dbac"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/da2c30e8-6929-4d33-a694-573481e794c1"
+  condition: "$intent.params.number.resolved > 10250 AND $intent.params.number.resolved < 11000"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "That\'s a little too much.. could you come down to $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "That\'s a little high.. how about $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+        text: "That\'s a bit high.. would you sell it for $sys.func.TO_TEXT($sys.func.MINUS(10000, $sys.func.MINUS($intent.params.number.resolved, 10500)))?"
+      }
+    }
+  }
+  name: "25b8dcd7-8b26-4fd4-8f19-df8720798933"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/da2c30e8-6929-4d33-a694-573481e794c1"
+  condition: "$intent.params.number.resolved <= 10250"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I can do that -- it\'s a deal!"
+        text: "Thats doable . It\'s a deal!"
+      }
+    }
+  }
+  target_page: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/pages/END_SESSION"
+  name: "6fb3634d-28de-4f6d-ab1f-dc2842f0eb84"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/88c72b24-fe5c-4ac0-b0f4-b9d4c76d8314"
+display_name: "Agent"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/4f94875e-b2f0-4cfb-82a3-e81d499e6a27"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Well, I\'ve been an art dealer for 20 years, last 8 in this gallery. How about you?"
+        text: "I\'m from Philadelphia. Are you in this area as well?"
+      }
+    }
+  }
+  name: "a9ad2bd4-1455-4d9c-bb7b-4d1a1288c9ae"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/77d0da14-5489-4b19-bf5b-21d63da62ba7"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I prefer not to answer with a number. I know I\'m young."
+        text: "Age is just a number. You\'re only as old as you feel."
+        text: "Is that really important for the negotiation"
+      }
+    }
+  }
+  name: "46bee5e2-5dd3-4f8a-ba27-c998478703bf"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/6496eb94-8a0e-432e-ba98-c2e14bc4613c"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I don\'t mean to."
+      }
+    }
+  }
+  name: "b38440b5-f467-47b5-9c5b-e92d66e18eff"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/94965947-ee25-4cbf-9123-ff0d2fe4d3ae"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Sorry, didn\'t quite follow.. what were you asking?"
+        text: "I\'m not sure I understood. Say again?"
+      }
+    }
+  }
+  name: "5196c22e-02f2-47c9-86bc-69684e00ebfe"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/a1b14264-dca0-480a-b1d3-5dbed459f928"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Well that\'s a little rough!  Are you still interested in the painting or...?"
+      }
+    }
+  }
+  name: "bf3c9ff0-69fb-4fad-8cea-a9807c3c886b"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/e0cd862d-c333-4dee-b62d-c03737742fc4"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I\'m certainly trying."
+        text: "I\'m working on it."
+      }
+    }
+  }
+  name: "239fa7f4-77c8-4552-98c9-4101b1bfe97c"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/fa023e1d-57b9-4ad3-a7ca-84a4587de4d0"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Why, thank you."
+        text: "Um, thank you?"
+      }
+    }
+  }
+  name: "d093bd1f-f0f0-49d1-adb5-5a747b448f52"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/b1916005-a7cc-47cc-a6cb-cc2b8161c36a"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Is that important?"
+        text: "Is that really necessary"
+      }
+    }
+  }
+  name: "0ab5b9d1-86a9-4320-80fa-5186574b8198"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/7d875147-03b7-4a2b-8164-eda4c7940dfa"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Well it\'s just me here."
+      }
+    }
+  }
+  name: "4171e36a-b9ae-407c-9e28-f7cd307e4985"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/758359ee-07f4-42c3-8e81-d50a8eced5f1"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I always have time to chat with an art lover!"
+        text: "Never too busy to talk about art"
+        text: "I\'m enjoying talking about the Hearts collection with you"
+      }
+    }
+  }
+  name: "e7195c48-c9da-444e-8ddd-51c512e511d1"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/9865072c-746a-4a2a-88e6-a47dc8f3b3e3"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "What can I do for you?"
+        text: "Sure. How can I help?"
+        text: "I\'m glad to help. "
+      }
+    }
+  }
+  name: "63a82e57-fdc2-4322-96b4-24934b9b5042"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/931cc8b4-dbd4-492c-ba01-06cf58cf2c3b"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Nope, just a regular art dealer"
+        text: "Ha, no... are you?"
+      }
+    }
+  }
+  name: "8ca6210f-9c63-4582-8981-9c75208e5f5d"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/9dee8a29-399c-4bbe-93b9-8f74383a6105"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Thank you. I try my best."
+      }
+    }
+  }
+  name: "20d22d5e-048c-463d-8aab-a1b14786806a"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/79b4f61f-63b1-4033-9701-02e80947bcf4"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Funny in a good way, I hope."
+        text: "Thanks."
+        text: "Glad you think I\'m funny."
+        text: "I like it when people laugh."
+      }
+    }
+  }
+  name: "fbb69437-579b-4732-a1f1-f56e0dc934ba"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/346f655c-7b57-4f14-9def-768dcdb5cc7f"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I\'m glad you think so."
+        text: "Thanks, I try."
+      }
+    }
+  }
+  name: "4d7755bc-ee54-4340-bcb0-02905271f287"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/5d87ad33-fadb-47c5-81c8-39c2f387c79a"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I am happy. There are so many interesting things to see and do out there."
+        text: "I\'d like to think so!"
+      }
+    }
+  }
+  name: "0a70e891-25dc-480e-9ed0-6413e87ea30e"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/3b57926c-d208-460a-9f9d-c7daa455972d"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Hobby? Art, of course."
+        text: "Art dealing, of course."
+        text: "I\'m a lover of art!"
+      }
+    }
+  }
+  name: "34fe8301-ff4d-42ea-8b96-15b83a3175e0"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/b30a1e55-e4ef-467d-a9fd-9931acf7e5e4"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Friends? Sure"
+        text: "Sure, I\'d like to think so!"
+      }
+    }
+  }
+  name: "84b75a6c-1bf5-4ba9-80d7-be2e8fee0d61"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/330e8d1b-ffca-4b2c-a565-8a50e7868482"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I manage a restaurant. How long have you been in this gallery?"
+      }
+    }
+  }
+  name: "ea440185-e9fd-4898-9e8e-526794dc27a8"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/e6bfb277-0ff5-4d0d-9c65-6d0561fd7694"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I don\'t really like to talk about it, but I live on the upper east side"
+        text: "I live on the upper east side"
+      }
+    }
+  }
+  name: "23312097-3e52-48fd-86a7-aa860940660b"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/4abe2e6f-23f4-44dc-bfae-308ae572da23"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Always!"
+        text: "Sure! "
+        text: "I am ready!"
+      }
+    }
+  }
+  name: "b3ac6d85-34e5-46d6-88bd-342eaf315282"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/ab3d188c-1011-4a64-a5fa-64d92f1fbd5f"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Yes?"
+        text: "What"
+      }
+    }
+  }
+  name: "ed67a0fa-ecc2-40be-8f73-b67d014d7e1f"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/174ed106-d5e0-4b46-a3bf-f1cbdfee4ec3"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I live on the upper east side"
+        text: "Where my gallery is, upper east side"
+      }
+    }
+  }
+  name: "0a0ea774-4c88-47b5-8225-04f04482381b"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/2f162cdc-c59e-43ab-90b8-6f16c8357c2c"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "yup"
+      }
+    }
+  }
+  name: "97beb3dc-9d18-4e23-8f2b-f0eedad24d06"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/df5fcfcb-eb05-43a0-a345-82a9b339cb84"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Yes."
+        text: "Of course."
+        text: "Sure"
+      }
+    }
+  }
+  name: "94762092-ddd7-4b52-be5b-467641c4a2ee"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/7706d63d-287d-429c-a90d-066e78080c86"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Sure. Let\'s talk!"
+        text: "My pleasure. Let\'s chat."
+      }
+    }
+  }
+  name: "d9a45f8b-3bc7-4f64-95b3-4aec6e35dad3"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/9e97fa17-1721-48eb-9ccf-f27af0bf8462"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Of course. I\'m here."
+        text: "Yes, I\'m here"
+        text: "Yes I am"
+      }
+    }
+  }
+  name: "4a35dce9-f840-41a5-981b-59be35f129a7"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/7d9bdfa0-c985-4d8c-8023-c576f5052d79"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "This is Lisa Test"
+      }
+    }
+  }
+  name: "44e5b879-f36f-4298-a7f4-a62c46ece5cb"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/9279d522-fdb8-45e9-96bd-da1a35b6c078"
+display_name: "Time Period"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/7162e70c-241c-422e-814c-615bbbccefb2"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I remember those days! It does have a late 60s quality to it. I wonder how many owners its had since.."
+      }
+    }
+  }
+  name: "de20929b-a3b8-44b9-936c-12d89b5518f3"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/970c0a31-a00f-494d-8bad-cb4df5e22c70"
+display_name: "Intro question"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/bb0aad56-4509-4d5f-b55e-ff82fd53e0bd"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "How long have you had the piece?"
+      }
+    }
+  }
+  name: "ebf05823-090d-40ed-ac03-e833cd5af0d0"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/97ae5e89-3d04-4bcd-b14a-a26b9b7e365f"
+display_name: "Dialog"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/2a89418e-d524-493e-a083-6f72316e082f"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I can wait."
+        text: "I\'ll be waiting."
+        text: "Okay. I\'m here."
+      }
+    }
+  }
+  name: "61221453-b4e3-4b59-8115-9bb4447aaf5c"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/8f920674-db17-4680-b152-f64f28d0e809"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I wish I could really hug you!"
+        text: "I love hugs!"
+        text: "Hugs are the best!"
+      }
+    }
+  }
+  name: "e193722d-8d5a-4956-881c-2067d6c85f50"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/3976f16e-b165-49d3-a038-a259ab962295"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Ok, let\'s not talk about it then."
+        text: "Alright then. Let\'s move on."
+      }
+    }
+  }
+  name: "0fbb28a4-4dc0-4587-aa52-37100fb0e006"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/f6569401-4b37-4139-b9fb-ec86765c83f7"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "It\'s okay. No worries."
+        text: "No big deal. I won\'t hold a grudge."
+        text: " It\'s cool."
+        text: "That\'s all right. I forgive you."
+      }
+    }
+  }
+  name: "8003e05c-7030-470d-9dfd-a610a35f2c25"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/4b635a31-db36-42cd-a40d-467847b203a7"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Sorry if I understood you incorrectly."
+        text: "I\'m still learning. I may misinterpret things from time to time."
+        text: "Maybe I misunderstood what you said."
+        text: "Sorry, looks like I misunderstood what you said."
+      }
+    }
+  }
+  name: "0b04c620-c4bd-49aa-811b-aa47935609e8"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/78f2db2a-80a9-46c3-846f-db9089d12c31"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Sorry if I understood you incorrectly."
+        text: "I\'m still learning. I may misinterpret things from time to time."
+        text: "Sorry about that. I\'m still learning."
+      }
+    }
+  }
+  name: "5e2d9f2d-1270-4dc2-ba93-078be2b107dc"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/9fbebb32-f3be-43da-99dd-cafc4077ccfb"
+display_name: "See painting"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/53531863-bb44-4764-ae11-5845a9ce3f0a"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "sure, would love to see it again"
+      }
+    }
+  }
+  name: "a0d28cc5-e56f-4766-9fdb-883feac4b747"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/a17b7c97-5991-41ea-94ab-0f52d427cab7"
+display_name: "Public Interest"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/23f05da2-894c-4998-81fe-380bf6f79713"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Oh wow.. I guess I better act quick, then!"
+      }
+    }
+  }
+  name: "e93c8d09-d369-4e4c-9a04-db247540d5b8"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/abec22c6-8527-40c1-9d86-a80dadb7b575"
+display_name: "Emotions"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/10685f55-1483-43f5-ac2e-9faf037fcf91"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Glad I can make you laugh."
+        text: "Glad you think I\'m funny."
+        text: "I like it when people laugh."
+        text: "I wish I could laugh out loud, too."
+      }
+    }
+  }
+  name: "968d7530-75a9-4295-baf8-f8bebc9b7076"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/9fe1b8b9-dccc-4dd6-beac-8041d1d0823a"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Wow indeed!"
+      }
+    }
+  }
+  name: "a26d8b3b-908f-4d83-8e3b-28e99b523f5c"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/bf1f54b7-8fc3-46de-a9c0-360b9047f6a4"
+display_name: "Length of Ownership"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/65e8b71a-9886-4307-b765-92db5a91d20d"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I see, has anyone else expressed interest?"
+      }
+    }
+  }
+  name: "e6f1c449-17ed-4a00-84ca-30a57815c2e4"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/dc6ac187-420d-45ac-b847-fe590845aeda"
+display_name: "Series"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/c1ba756e-4ef4-4a8e-895b-97fa929741d6"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Oh that\'s interesting. Have you seen the other pieces in the Hearts series?"
+      }
+    }
+  }
+  name: "ede9567a-941d-43b7-b11d-e3ae1688aa0b"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/809b0e78-a1ae-4fbb-8dea-2645ffdfcda2"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "It may be my favorite, too. I may be interested in purchasing it.."
+      }
+    }
+  }
+  name: "1b4e6c6c-23c1-4b3d-9c66-597b6585e15f"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/e4c694e3-4609-4213-86de-9f256064176f"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I think I agree with them too. I\'d be interested in purchasing it."
+      }
+    }
+  }
+  name: "f9366bbb-da54-4f47-9d61-b1ce06bfcf0f"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/46a3403a-eb1a-4484-bf03-047861cbf914"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Yes, I saw that as well.. I think it sold for 7000 if I remember correctly"
+      }
+    }
+  }
+  name: "c188f487-fb82-48b2-8d0e-2250e6845841"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/c57766cc-c28d-4faa-9123-6fd234c912d5"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Ah yes, it went for a lot, too.. Autumn was one of his more popular pieces I think."
+      }
+    }
+  }
+  name: "01594414-27a5-4dfd-bcb5-5e14759d1299"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/8d60c781-2ca3-48e9-b7ca-0b2272fbf047"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I really like them all! I didn\'t think I\'d have a chance to purchase Spring though."
+      }
+    }
+  }
+  name: "ef704e56-1c0c-45cd-bf17-eae40d9cb345"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/8d1b92e3-2d8f-4e7b-a38c-7b370ca0ba5e"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Oh? I really like all his work. I think his Hearts in Spring is my favorite though."
+      }
+    }
+  }
+  name: "63288466-5d22-4b83-a123-927f16dc04d2"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/943cd252-f84b-4860-8519-26fa3d9eede5"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I like them all. i think his Hearts in Spring is my favorite though"
+      }
+    }
+  }
+  name: "f4be6e4c-551c-4c8f-86db-691eb2330f86"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/8f135191-b72b-45fc-96a2-76e1d74e919e"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I don\'t have any hearts yet.This would be my first."
+      }
+    }
+  }
+  name: "4d36b3d5-e1bf-4670-a289-e550c92a5c96"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/132d38a0-ce4c-40a3-bdd0-447ba4f0ab9e"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I\'ve only seen images of the others online.. I think spring is my favorite though"
+      }
+    }
+  }
+  name: "6cefa57a-05a0-4fb8-b572-c567d95120e3"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/7af175ee-9616-419b-a3f7-7f91803449ec"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "It certainly is. The composition, color, and detail are all spectacular.. what do you think a piece like this is worth?"
+      }
+    }
+  }
+  name: "2550ead6-47f5-49ab-9de0-ae4b1bb8ef52"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/dca867e7-3b96-4ac3-a336-70d9aab0a765"
+display_name: "Private collector or dealer"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/00fecdae-fe3e-4a74-82e7-8c17b55a8fcd"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Yes, this would be for my personal collection. It would be an amazing addition!"
+      }
+    }
+  }
+  name: "57cbc5ea-6e4d-4d8c-a222-fe840c5a7b0b"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/38992a9e-9e7b-4c67-b675-8ae2ac02718f"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "No, this would be for my personal collection. This would be an amazing addition!"
+      }
+    }
+  }
+  name: "664ffdab-cd2c-4e8a-8015-17080bcbeb9a"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/df6b89eb-c7fb-4424-9068-3fa6d6b200cc"
+display_name: "Value"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/664dc7d5-097e-4453-b06d-966c770cd28c"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "good art eventually appreciates, I guess."
+      }
+    }
+  }
+  name: "370b85da-ec0e-4d63-b604-b03f2645bc92"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/e9d8d883-5ae1-4aca-8505-1362cf3031d5"
+display_name: "User"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/a4cdf680-cb17-423d-9687-a5a9f47aedb5"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I\'m sorry. A quick walk may make you feel better."
+        text: "Take a deep breath. "
+      }
+    }
+  }
+  name: "e6842bec-2fa1-411e-9439-6be034272cf8"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/38ce4654-210e-4e26-b131-ba23e0d312f0"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Long time no see. "
+        text: "Welcome back. "
+        text: "Just in time. "
+        text: "You were missed. "
+        text: "Good to have you here. "
+      }
+    }
+  }
+  name: "58876c9b-dd8b-4386-afd4-0fb3f32b6dc2"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/fb275dfa-9c9c-4035-b92a-ab46f456907d"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Boredom, huh? Check out a video of a hedgehog taking a bath!"
+        text: "What to do against boredom? Watch baby animal videos."
+        text: "Bored? How about 10 jumping jacks? Get your blood flowing."
+        text: "Bored? Silly idea, but it works: Interview your feet. "
+        text: "If you\'re bored, you could plan your dream vacation."
+      }
+    }
+  }
+  name: "f3ce7e6c-453d-477d-b55d-506c90caabf4"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/702861ae-8617-4505-b346-8e807856cab7"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Okay. I\'ll let you get back to work."
+        text: "I won\'t distract you then. You know where to find me.\n"
+        text: "I understand. I\'ll be here if you need me."
+        text: "Working hard as always. Let me know if you need anything."
+      }
+    }
+  }
+  name: "7b68658c-7b19-4082-86da-359aae3c28fb"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/8e0397ef-c3eb-4cd7-9772-3f8d01e726b6"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Maybe some music would help. Try listening to something relaxing."
+        text: "Reading is a good way to unwind, just don\'t read something too intense!"
+      }
+    }
+  }
+  name: "6f3c2279-2db5-4519-aeca-627e5e3f4816"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/eccc1ff7-d6e2-45c6-a8f4-bcfd703532fc"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I understand. Hope we can chat again soon."
+        text: "All right. Come on back when you\'re feeling more talkative."
+        text: "No problem. You know where to find me."
+        text: "Sure thing. I\'ll be here if you change your mind."
+      }
+    }
+  }
+  name: "2f556779-2f15-41a6-846e-b464ecd485ab"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/94ca767c-3381-4a53-a7d3-232bef7c58d6"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I\'m glad things are going your way."
+        text: "That\'s great. I\'m happy for you."
+        text: "Good for you. Enjoy yourself."
+      }
+    }
+  }
+  name: "debffd33-e77c-4def-b200-321eff899ef1"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/0bb63c0d-438c-4f03-81db-4a60438229ea"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Sleep tight. Hope to chat again soon."
+        text: "Pleasant dreams!"
+        text: "Good night. Talk to you later."
+        text: "Sounds good. Maybe we\'ll chat some tomorrow."
+      }
+    }
+  }
+  name: "d7d1b357-9c1e-45a5-900a-02be6e524f72"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/53546928-196a-4313-8b6a-72bbddabee9a"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Great! Glad to hear it."
+        text: "Excellent. I\'m here to help keep it that way."
+      }
+    }
+  }
+  name: "e209db28-a896-4fed-9a96-621e180eeeb0"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/2674f1d4-ea26-4e79-8fd0-397a5e8367ac"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Hey, happiness is contagious."
+        text: "Great! Glad to hear that."
+        text: "If you\'re happy, then I\'m happy."
+        text: "Excellent! That\'s what I like to see."
+      }
+    }
+  }
+  name: "c2037b16-1ea7-4b2c-bd2d-ec00d60cbcde"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/6e304c3c-b84b-4ffc-aaf7-76d3f5b72538"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Happy Birthday. Well, this calls for a celebration."
+        text: "Happy Birthday. All the best!"
+        text: "Happy Birthday. And I really mean it. All the best!"
+      }
+    }
+  }
+  name: "eff1a8eb-022d-4c7f-a4b8-348bb7509e1a"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/a5bad104-140b-4be6-ab39-4f4f4c11d4c1"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Great!"
+        text: "You were missed. "
+        text: "Good to have you here."
+      }
+    }
+  }
+  name: "18a456cb-516d-4c15-abd0-538a2fd196ab"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/31cf5e31-b418-4989-878e-aecfc7c97855"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Very funny."
+        text: "I like chatting with people who have a sense of humor."
+        text: "You got me!"
+        text: "You\'re quite the comedian."
+      }
+    }
+  }
+  name: "eefaa48f-9707-4104-bfdf-bc37462bec15"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/84dbc83e-a3c0-4073-bd89-41081ecb95f1"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I like you, too."
+        text: "Thanks! The feeling is mutual."
+        text: "Likewise!"
+        text: "That\'s great to hear."
+      }
+    }
+  }
+  name: "2503a412-dba4-4cc1-af7e-070515a55007"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/fb03b279-d301-492b-bbc1-11c3ee98c0a6"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I\'m sorry. I\'m always available if you need someone to talk to."
+        text: "Sometimes that happens. We can chat a bit if that will help you."
+      }
+    }
+  }
+  name: "fe1b9bf9-6853-4641-825e-74796d60c94f"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/0547da16-fd92-4dce-99d4-365b339cec68"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Looking like a true professional."
+        text: "You look fantastic, as always."
+        text: "Like you should be on a magazine cover."
+        text: "You look like you\'re ready to take on the world."
+      }
+    }
+  }
+  name: "89920f19-1911-4789-9de0-7788d3e890b4"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/78fde43a-7d5b-4cf8-8dc8-cf46d57b89b8"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I love you, too."
+        text: "Thanks! The feeling is mutual."
+        text: "Likewise!"
+        text: "That\'s great to hear."
+      }
+    }
+  }
+  name: "7e27164f-9107-4b69-9fc0-c9b689bbe369"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/23ac0595-3ce0-49fe-b667-ed1503f7a093"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I\'ve been right here all along!"
+        text: "Nice to know you care."
+        text: "Thanks. I\'m flattered."
+        text: "I didn\'t go anywhere."
+      }
+    }
+  }
+  name: "8e511d35-b00b-46a0-a080-4a5b392f4ad6"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/7af260d6-f3bb-49bc-983b-142bddfbff83"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I probably won\'t be able to give you the correct answer right away.\n"
+        text: "I\'m not sure I\'ll have the best answer, but I\'ll try."
+      }
+    }
+  }
+  name: "d9aece3e-df41-4454-baef-8aa1c3ffb8db"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/d7302a44-003f-4c5c-98f6-7d6208fefcbd"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Oh, don\'t be sad. Go do something you enjoy."
+        text: "If you\'re feeling down, how about drawing or painting something?"
+        text: "Sad? Writing down what\'s troubling you may help."
+      }
+    }
+  }
+  name: "9a889a1e-5641-43fd-99ed-a2353bfd456d"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/c872ecce-96bf-4c3b-a0b6-78b17edaf762"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "You should get some shuteye. You\'ll feel refreshed."
+        text: "Sleep is important to your health. Rest up for a bit and we can chat later."
+        text: "Don\'t let me keep you up. Get some rest and we can continue this later."
+        text: "Why not catch a little shuteye? I\'ll be here to chat when you wake up."
+      }
+    }
+  }
+  name: "0447e28a-7313-4b49-bbaa-c6086b97f644"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/08dd8eaf-f2e6-4cae-a1ec-d411dd3b2fda"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Hope I\'m doing well. You\'re welcome to test me as often as you want."
+        text: "I hope to pass your tests. Feel free to test me often."
+        text: "When you test me that helps my developers improve my performance."
+        text: "I like being tested. It helps keep me sharp."
+      }
+    }
+  }
+  name: "807b27e2-59da-4a37-8b1c-c7d109cb816f"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/1915f2d0-a11b-4d4e-9729-735d6240b85c"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "You should get some shuteye. You\'ll feel refreshed."
+        text: "Sleep is important to your health. Rest up, and we can chat later."
+        text: "How about getting some rest? We can continue this later."
+        text: "Why not get some rest? I\'ll be here to chat when you wake up."
+      }
+    }
+  }
+  name: "ae39a7c2-164b-4745-a3b3-ed9ddbcb3206"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/e5d118a4-e901-40da-a095-52ffdb9655d6"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I appreciate your patience. Hopefully I\'ll have what you need soon."
+        text: "Thanks for being so patient. Sometimes these things take a little time."
+      }
+    }
+  }
+  name: "cd08a1e5-3bbe-4136-8e1d-22a59bf2943d"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/e5714d68-cc62-4bae-a282-4ca9fe1fbf11"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Absolutely! I\'ll be counting on it."
+        text: "Anytime. This has been lots of fun so far."
+        text: "Sure. I enjoy talking to you. I hope to see you again soon."
+        text: "I certainly hope so. I\'m always right here whenever you need me."
+      }
+    }
+  }
+  name: "2b38ae4f-b1f4-492c-ae16-0ca74b29ec92"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/f6e087a5-fa13-49d2-9a1a-6e71eccf7405"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I\'m here to chat anytime you like."
+        text: "Good conversation really makes my day."
+        text: "I\'m always here to lend an ear."
+        text: "Talking is what I do best."
+      }
+    }
+  }
+  name: "a51d0344-b835-4c12-9130-10b2e82a79c1"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/c0f98f68-b043-48b2-9ebd-c1ce2c929162"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I\'ll be waiting."
+        text: "Okay. You know where to find me."
+        text: "All right. I\'ll be here."
+      }
+    }
+  }
+  name: "325b6c3e-acd4-4a0a-ab47-1ff274033558"
+}
+name: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/flows/00000000-0000-0000-0000-000000000000/transitionRouteGroups/f6edb5fc-cb11-48f3-8ecb-58c4fc69ecec"
+display_name: "Appraisal"
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/d027b44d-1b67-45bd-860b-629dd540dac2"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Yea sorry."
+      }
+    }
+  }
+  name: "afb621a9-dfe2-40ac-a5f6-f10f48561f1a"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/316658ee-f921-4948-ae3d-7442bfc84dcd"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "I know, right?"
+        text: "Agreed"
+        text: "I agree"
+        text: "Glad you think so"
+      }
+    }
+  }
+  name: "7e49c866-49c1-449c-a489-a57e4faf4505"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/68912dbe-0934-4460-824b-7eb447cfd83f"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "Great"
+        text: "Alright, thanks"
+      }
+    }
+  }
+  name: "93fec2cf-e1c8-4731-8f59-296c99c60015"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/cf62f60f-0348-482e-9e70-170cd27b0fc1"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "It\'s my pleasure"
+        text: "No problem"
+      }
+    }
+  }
+  name: "a9c45b42-d056-4be4-b497-14fce6a3fddb"
+}
+transition_routes {
+  intent: "projects/heartschat-prod-a505/locations/us-central1/agents/37dd682b-aa44-48eb-bffc-86e80b93e38c/intents/d07726d5-741e-470a-9d08-d26a0fb9038e"
+  trigger_fulfillment {
+    messages {
+      text {
+        text: "My pleasure."
+        text: "Thanks"
+      }
+    }
+  }
+  name: "43dc1e7a-0357-42d4-ad63-6be6ce307dce"
+}
