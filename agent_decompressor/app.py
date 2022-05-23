@@ -4,6 +4,7 @@ import asyncio
 import string
 import re
 import time
+from datetime import datetime
 
 # export GOOGLE_APPLICATION_CREDENTIALS="heartschat-prod-a505-de929d994427.json"
 
@@ -124,13 +125,14 @@ async def write_route_groups(route_groups):
                 phrase_row += 1
             intent_row += 1
         col += 1
-    workbook.save(filename="dialog_map.xlsx")
+    now = datetime.now()
+    dt_string = now.strftime("%m-%d-%Y_%H-%M-%S")
+    workbook.save(filename="dialog_map_{}".format(dt_string))
 
 def clean_string(s):
     rx = re.compile('\W+')
     s = rx.sub("", str(s)).strip()
     return s
-
 
 def main():
     # asyncio.run(get_intents())
