@@ -3,6 +3,7 @@ from openpyxl import Workbook
 import asyncio
 import string
 import re
+import time
 
 # export GOOGLE_APPLICATION_CREDENTIALS="heartschat-prod-a505-de929d994427.json"
 
@@ -15,11 +16,7 @@ FLOW_ID = "00000000-0000-0000-0000-000000000000"
 AGENT = "projects/{}/locations/{}/agents/{}".format(PROJECT_ID, LOCATION_ID, AGENT_ID)
 FLOW = "{}/flows/{}".format(AGENT, FLOW_ID)
 
-async def get_intents():
-    client = dialogflowcx_v3.IntentsAsyncClient(client_options={"api_endpoint": ENDPOINT_ID})
-    request = dialogflowcx_v3.ListIntentsRequest(parent=AGENT)
-    intents = await client.list_intents(request=request)
-    await write_intents(intents)
+count = 0
 
 async def write_intents(intents):
     workbook = Workbook()
@@ -44,30 +41,77 @@ async def get_flows():
     with open('flows.txt', 'w') as f:
         f.write(str(flow))
 
+intent_count = 1
+
 async def get_route_groups():
     client = dialogflowcx_v3.TransitionRouteGroupsAsyncClient(client_options={"api_endpoint": ENDPOINT_ID})
     request = dialogflowcx_v3.ListTransitionRouteGroupsRequest(parent=FLOW)
     route_groups = await client.list_transition_route_groups(request=request)
     await write_route_groups(route_groups)
 
-async def get_intent(intent_id):
+async def testing():
     client = dialogflowcx_v3.IntentsAsyncClient(client_options={"api_endpoint": ENDPOINT_ID})
-    request = dialogflowcx_v3.GetIntentRequest(name=intent_id)
-    intent = await client.get_intent(request=request)
+    request = dialogflowcx_v3.ListIntentsRequest(parent=AGENT)
+    intents = await client.list_intents(request=request)
+    with open('get_intents.txt', 'w') as f:
+        async for intent in intents:
+            f.write(str(intent.name))
+            f.write("\n")
+    client = dialogflowcx_v3.TransitionRouteGroupsAsyncClient(client_options={"api_endpoint": ENDPOINT_ID})
+    request = dialogflowcx_v3.ListTransitionRouteGroupsRequest(parent=FLOW)
+    route_groups = await client.list_transition_route_groups(request=request)
+    with open('get_routes.txt', 'w') as f:
+        async for route_group in route_groups:
+            for route in route_group.transition_routes:
+                f.write(str(route.intent))
+                f.write("\n")
+
+async def get_intents():
+    client = dialogflowcx_v3.IntentsAsyncClient(client_options={"api_endpoint": ENDPOINT_ID})
+    request = dialogflowcx_v3.ListIntentsRequest(parent=AGENT)
+    intents = await client.list_intents(request=request)
+    # await write_intents(intents)
+    with open('intents.txt', 'w') as f:
+        async for intent in intents:
+            f.write("".join([str(ord(i)) for i in intent.name]))
+    return intents
+
+async def get_intent(intent_name, intents):
+    # client = dialogflowcx_v3.IntentsAsyncClient(client_options={"api_endpoint": ENDPOINT_ID})
+    # request = dialogflowcx_v3.GetIntentRequest(name=intent_id)
+    # intent = await client.get_intent(request=request)
+    # return intent
+    async for intent in intents:
+        if intent_name == intent.name:
+            print("reg")
+            return intent
+    client = dialogflowcx_v3.IntentsAsyncClient(client_options={"api_endpoint": ENDPOINT_ID})
+    request = dialogflowcx_v3.GetIntentRequest(name=intent_name)
+    global count
+    if count >= 55:
+        print("timeout")
+        time.sleep(60)
+        count = 0
+    intent = await client.get_intent(request = request)
+    count += 1
+    print("api")
     return intent
 
 async def write_route_groups(route_groups):
+    global intent_count
     workbook = Workbook()
     sheet = workbook.active
     col = 0
+    intents = await get_intents()
     async for route_group in route_groups:
         sheet["{}1".format(ALPHABET[col])] = route_group.display_name
         intent_row = 2
         for route in route_group.transition_routes:
-            intent = await get_intent(route.intent)
-            sheet["{}{}".format(ALPHABET[col], intent_row)] = clean_string(intent.display_name)
-            intent_sheet = workbook.create_sheet(clean_string(intent.display_name).replace("?", ""))
-            sheet["{}{}".format(ALPHABET[col], intent_row)].hyperlink = "#{}!A1".format(clean_string(intent.display_name).replace("?", ""))
+            intent = await get_intent(route.intent, intents)
+            sheet["{}{}".format(ALPHABET[col], intent_row)] = intent.display_name
+            intent_sheet = workbook.create_sheet(str(intent_count))
+            sheet["{}{}".format(ALPHABET[col], intent_row)].hyperlink = "#{}!A1".format(str(intent_count))
+            intent_count += 1
             phrase_row = 1
             for phrase in intent.training_phrases:
                 phrase_text = "".join([part.text for part in phrase.parts])
@@ -75,7 +119,8 @@ async def write_route_groups(route_groups):
                 phrase_row += 1
             phrase_row = 1
             for message in route.trigger_fulfillment.messages:
-                intent_sheet["B{}".format(phrase_row)] = clean_string(message.text)
+                intent_sheet["B{}".format(phrase_row)] = message.text.text[phrase_row - 1]
+                print(message.text.text[phrase_row - 1])
                 phrase_row += 1
             intent_row += 1
         col += 1
@@ -89,7 +134,6 @@ def clean_string(s):
 
 def main():
     # asyncio.run(get_intents())
-    # asyncio.run(get_flows())
     asyncio.run(get_route_groups())
 
 main()
