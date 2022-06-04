@@ -4,13 +4,14 @@ import asyncio
 import string
 import re
 import time
+import json
 from datetime import datetime
 
 # export GOOGLE_APPLICATION_CREDENTIALS="heartschat-prod-a505-de929d994427.json"
 
 ALPHABET = list(string.ascii_uppercase)
 PROJECT_ID = "heartschat-prod-a505"
-AGENT_ID = "37dd682b-aa44-48eb-bffc-86e80b93e38c"
+AGENT_ID = "68ce8bd9-e5ba-4119-8773-d050207969b7"
 LOCATION_ID = "us-central1"
 ENDPOINT_ID = "us-central1-dialogflow.googleapis.com"
 FLOW_ID = "00000000-0000-0000-0000-000000000000"
@@ -18,6 +19,7 @@ AGENT = "projects/{}/locations/{}/agents/{}".format(PROJECT_ID, LOCATION_ID, AGE
 FLOW = "{}/flows/{}".format(AGENT, FLOW_ID)
 
 count = 0
+fulfillments = []
 
 async def write_intents(intents):
     workbook = Workbook()
@@ -120,14 +122,34 @@ async def write_route_groups(route_groups):
                 phrase_row += 1
             phrase_row = 1
             for message in route.trigger_fulfillment.messages:
-                intent_sheet["B{}".format(phrase_row)] = message.text.text[phrase_row - 1]
-                print(message.text.text[phrase_row - 1])
-                phrase_row += 1
+                # json_obj = json.dumps(message.text)
+                print(message)
+                i = 0
+                while True:
+                    try:
+                        intent_sheet["B{}".format(i+1)] = message.text.text[i]
+                        print(message.text.text[i])
+                        fulfillments.append(message.text.text[i])
+                        i += 1
+                        if i > 100:
+                            break
+                    except:
+                        print("Num fulfillments found: ", str(i))
+                        break
+                    # phrase_row += 1
             intent_row += 1
         col += 1
+    write_fulfillments(workbook)
     now = datetime.now()
     dt_string = now.strftime("%m-%d-%Y_%H-%M-%S")
-    workbook.save(filename="dialog_map_{}".format(dt_string))
+    workbook.save(filename="dialog_map_{}.xlsx".format(dt_string))
+
+def write_fulfillments(workbook):
+    fulfillments_sheet = workbook.create_sheet("fulfillments")
+    row = 1
+    for f in fulfillments:
+        fulfillments_sheet["A{}".format(row)] = f
+        row += 1
 
 def clean_string(s):
     rx = re.compile('\W+')
