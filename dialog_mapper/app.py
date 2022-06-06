@@ -7,7 +7,8 @@ import time
 import json
 from datetime import datetime
 
-# export GOOGLE_APPLICATION_CREDENTIALS="heartschat-prod-a505-de929d994427.json"
+# export GOOGLE_APPLICATION_CREDENTIALS="heartschat-prod-a505-9599eda00cef.json"
+# change file name to your own credentials file as necessary
 
 ALPHABET = list(string.ascii_uppercase)
 PROJECT_ID = "heartschat-prod-a505"
@@ -74,9 +75,9 @@ async def get_intents():
     request = dialogflowcx_v3.ListIntentsRequest(parent=AGENT)
     intents = await client.list_intents(request=request)
     # await write_intents(intents)
-    with open('intents.txt', 'w') as f:
-        async for intent in intents:
-            f.write("".join([str(ord(i)) for i in intent.name]))
+    # with open('intents.txt', 'w') as f:
+    #     async for intent in intents:
+    #         f.write("".join([str(ord(i)) for i in intent.name]))
     return intents
 
 async def get_intent(intent_name, intents):
