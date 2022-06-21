@@ -10,7 +10,7 @@ from datetime import datetime
 ALPHABET = list(string.ascii_uppercase)
 ENDPOINT = "us-central1-dialogflow.googleapis.com"
 AGENT = "projects/heartschat-prod-a505/locations/us-central1/agents/3eaf696f-5b7d-4e1e-b47c-5c9066d1dce9"
-FLOW = "projects/heartschat-prod-a505/locations/us-central1/agents/3eaf696f-5b7d-4e1e-b47c-5c9066d1dce9/flows/00000000-0000-0000-0000-000000000000"
+FLOW = "{}/flows/00000000-0000-0000-0000-000000000000".format(AGENT)
 
 async def get_route_groups():
     client = dialogflowcx_v3.TransitionRouteGroupsAsyncClient(client_options={"api_endpoint": ENDPOINT})
