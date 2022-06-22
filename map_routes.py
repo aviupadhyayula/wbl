@@ -9,7 +9,8 @@ from datetime import datetime
 
 ALPHABET = list(string.ascii_uppercase)
 ENDPOINT = "us-central1-dialogflow.googleapis.com"
-AGENT = "projects/heartschat-prod-a505/locations/us-central1/agents/3eaf696f-5b7d-4e1e-b47c-5c9066d1dce9"
+PROJECT = "projects/heartschat-prod-a505/locations/us-central1"
+AGENT = "{}/agents/3eaf696f-5b7d-4e1e-b47c-5c9066d1dce9".format(PROJECT)
 FLOW = "{}/flows/00000000-0000-0000-0000-000000000000".format(AGENT)
 
 async def get_route_groups():
@@ -58,13 +59,22 @@ async def write_routes(route_groups, intents):
                 message_num += 1
             message_num = 2
             for message in route.trigger_fulfillment.messages:
-                route_sheet["B{}".format(message_num)] = message.text.text[message_num - 2]
-                fulfillments_sheet["A{}".format(fulfillment_num)] = message.text.text[message_num - 2]
-                message_num += 1
-                fulfillment_num += 1
+                print("{} {}".format(route_num, message_num))
+                for text in message.text.text:
+                    print("{} {}".format(route_num, message_num))
+                    route_sheet["B{}".format(message_num)] = text
+                    message_num += 1
+                # route_sheet["B{}".format(message_num)] = message.text.text[0]
+                    fulfillments_sheet["A{}".format(fulfillment_num)] = text
+                 #message_num += 1
+                    fulfillment_num += 1
             intent_num += 1
             route_num += 1
         route_group_num += 1
+    ref_sheet = workbook.create_sheet("Reference")
+    ref_sheet["A1"] = AGENT
+    ref_sheet["A2"] = FLOW
+    ref_sheet["A3"] = ENDPOINT
     now = datetime.now()
     datetime_string = now.strftime("%m-%d-%Y_%H-%M-%S")
     workbook.save(filename="route_map_{}.xlsx".format(datetime_string))
