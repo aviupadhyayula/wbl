@@ -9,8 +9,7 @@ import time
 
 ALPHABET = list(string.ascii_uppercase)
 ENDPOINT = "us-central1-dialogflow.googleapis.com"
-PROJECT = "projects/heartschat-prod-a505/locations/us-central1"
-AGENT = "{}/agents/3eaf696f-5b7d-4e1e-b47c-5c9066d1dce9".format(PROJECT)
+AGENT = "projects/heartschat-prod-a505/locations/us-central1/agents/3eaf696f-5b7d-4e1e-b47c-5c9066d1dce9"
 FLOW = "{}/flows/00000000-0000-0000-0000-000000000000".format(AGENT)
 
 async def get_route_groups():
