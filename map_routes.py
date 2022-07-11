@@ -1,4 +1,6 @@
 from google.cloud import dialogflowcx_v3
+# from paraphrase_text import *
+from utils import *
 from openpyxl import Workbook
 from datetime import datetime
 import asyncio
@@ -9,26 +11,18 @@ import time
 
 ALPHABET = list(string.ascii_uppercase)
 ENDPOINT = "us-central1-dialogflow.googleapis.com"
-AGENT = "projects/heartschat-prod-a505/locations/us-central1/agents/3eaf696f-5b7d-4e1e-b47c-5c9066d1dce9"
+AGENT = "projects/heartschat-prod-a505/locations/us-central1/agents/8b87e314-ec79-4386-9b5d-9347da0a0e23"
 FLOW = "{}/flows/00000000-0000-0000-0000-000000000000".format(AGENT)
 
-async def get_route_groups():
-    client = dialogflowcx_v3.TransitionRouteGroupsAsyncClient(client_options={"api_endpoint": ENDPOINT})
-    request = dialogflowcx_v3.ListTransitionRouteGroupsRequest(parent=FLOW)
-    route_groups = await client.list_transition_route_groups(request=request)
-    return route_groups
-
-async def get_intents():
-    client = dialogflowcx_v3.IntentsAsyncClient(client_options={"api_endpoint": ENDPOINT})
-    request = dialogflowcx_v3.ListIntentsRequest(parent=AGENT)
-    intents = await client.list_intents(request=request)
-    return intents
+route_num = 1
+page_num = 0
+fulfillment_num = 1
+intent_num = 2
 
 async def get_intent(intents, intent_name):
     async for intent in intents:
         if intent.name == intent_name:
             return intent
-    time.sleep(1)
     client = dialogflowcx_v3.IntentsAsyncClient(client_options={"api_endpoint": ENDPOINT})
     request = dialogflowcx_v3.GetIntentRequest(name=intent_name)
     intent = await client.get_intent(request=request)
@@ -45,52 +39,64 @@ def create_workbook():
     ref_sheet["A3"] = ENDPOINT
     now = datetime.now()
     datetime_string = now.strftime("%m-%d-%Y_%H-%M-%S")
-    return workbook, "route_map_{}.xlsx".format(datetime_string)
+    return workbook, "route_map_{}.xlsx".format(datetime_string)  
 
-async def write_routes(route_groups, intents):
+
+async def write_route(workbook, route, intents):
+    global route_num, fulfillment_num, page_num, intent_num
+    ref_sheet = workbook["Reference"]
+    fulfillments_sheet = workbook["Fulfillments"]
+    routes_sheet = workbook["Routes"]
+    route_sheet = workbook.create_sheet(str(route_num))
+    ref_sheet["B{}".format(route_num)] = route.name
+    routes_sheet["{}{}".format(ALPHABET[page_num], intent_num)].hyperlink = "#{}!A1".format(route_num)
+    message_num = 1
+    for message in route.trigger_fulfillment.messages:
+        for text in message.text.text:
+            route_sheet["B{}".format(message_num)] = text
+            fulfillments_sheet["A{}".format(fulfillment_num)] = text
+            message_num += 1
+            fulfillment_num += 1
+    if route.condition:
+        routes_sheet["{}{}".format(ALPHABET[page_num], intent_num)] = route.condition
+    if route.intent:
+        intent = await get_intent(intents, route.intent)
+        routes_sheet["{}{}".format(ALPHABET[page_num], intent_num)] = intent.display_name
+        await write_intent(route_sheet, intent)
+
+async def write_intent(route_sheet, intent):
+    message_num = 1
+    for phrase in intent.training_phrases:
+        route_sheet["A{}".format(message_num)] = "".join([part.text for part in phrase.parts])
+        message_num += 1
+
+async def write_routes(pages, intents):
+    global page_num, route_num, fulfillment_num, intent_num
     workbook, workbook_name = create_workbook()
     routes_sheet = workbook["Routes"]
     fulfillments_sheet = workbook["Fulfillments"]
-    ref_sheet = workbook["Reference"]
-    route_group_num = 0
-    route_num = 1
-    fulfillment_num = 1
-    async for route_group in route_groups:
-        routes_sheet["{}1".format(ALPHABET[route_group_num])] = route_group.display_name
+    async for page in pages:
+        routes_sheet["{}1".format(ALPHABET[page_num])] = page.display_name
         intent_num = 2
-        for route in route_group.transition_routes:
-            route_sheet = workbook.create_sheet(str(route_num))
-            ref_sheet["B{}".format(route_num)] = route.name
-            message_num = 1
-            for message in route.trigger_fulfillment.messages:
-                for text in message.text.text:
-                    route_sheet["B{}".format(message_num)] = text
-                    fulfillments_sheet["A{}".format(fulfillment_num)] = text
-                    message_num += 1
-                    fulfillment_num += 1
-            if route.intent == "":
-                routes_sheet["{}{}".format(ALPHABET[route_group_num], intent_num)] = route.condition
-                routes_sheet["{}{}".format(ALPHABET[route_group_num], intent_num)].hyperlink = "#{}!A1".format(route_num)
+        if page.transition_route_groups:
+            for route_group_name in page.transition_route_groups:
+                route_group = await get_route_group(route_group_name)
+                for route in route_group.transition_routes:
+                    await write_route(workbook, route, intents)
+                    intent_num += 1
+                    route_num += 1
+        if page.transition_routes:
+            for route in page.transition_routes:
+                await write_route(workbook, route, intents)
                 intent_num += 1
                 route_num += 1
-                continue
-            intent = await get_intent(intents, route.intent)
-            routes_sheet["{}{}".format(ALPHABET[route_group_num], intent_num)] = intent.display_name
-            routes_sheet["{}{}".format(ALPHABET[route_group_num], intent_num)].hyperlink = "#{}!A1".format(route_num)
-            message_num = 1
-            for phrase in intent.training_phrases:
-                phrase_text = "".join([part.text for part in phrase.parts])
-                route_sheet["A{}".format(message_num)] = phrase_text
-                message_num += 1
-            intent_num += 1
-            route_num += 1
-        route_group_num += 1
+        page_num += 1
     workbook.save(filename=workbook_name)
 
 async def main():
-    route_groups = await get_route_groups()
-    intents = await get_intents()
-    await write_routes(route_groups, intents)
+    pages = await get_pages(FLOW)
+    intents = await get_intents(AGENT)
+    await write_routes(pages, intents)
 
 if __name__ == '__main__':
     asyncio.run(main())
