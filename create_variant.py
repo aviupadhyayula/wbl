@@ -1,11 +1,12 @@
 from google.cloud import dialogflowcx_v3
 from openpyxl import Workbook, load_workbook
+from utils import *
 import asyncio
 import time
 
 # export GOOGLE_APPLICATION_CREDENTIALS="heartschat-prod-a505-9599eda00cef.json"
 
-ROUTE_MAP = "route_map_06-29-2022_13-03-42.xlsx"
+ROUTE_MAP = "route_map_07-10-2022_22-11-25.xlsx"
 ENDPOINT = "us-central1-dialogflow.googleapis.com"
 VARIANT_NAME = "create_variant_test_1"
 
@@ -34,46 +35,52 @@ async def restore_reference(agent_name, agent_content):
     operation = await client.restore_agent(request=request)
     response = await operation.result()
 
-async def get_route_groups(agent_name):
-    client = dialogflowcx_v3.TransitionRouteGroupsAsyncClient(client_options={"api_endpoint": ENDPOINT})
-    request = dialogflowcx_v3.ListTransitionRouteGroupsRequest(parent="{}/flows/00000000-0000-0000-0000-000000000000".format(agent_name))
-    route_groups = await client.list_transition_route_groups(request=request)
-    return route_groups
-
-async def update_variant(route_groups):
+async def update_variant(pages):
     workbook = load_workbook(ROUTE_MAP)
     ref_sheet = workbook["Reference"]
-    async for route_group in route_groups:
-        for route in route_group.transition_routes:
-            for i in range(1, len(workbook.sheetnames) - 3):
-                if route.name != ref_sheet["B{}".format(i)].value:
-                    continue
-                route_sheet = workbook[str(i)]
-                for message in route.trigger_fulfillment.messages:
-                    fulfillment_num = 1
-                    for j in range(len(message.text.text)):
-                        if route_sheet["B{}".format(fulfillment_num)].value:
-                            message.text.text[j] = route_sheet["B{}".format(fulfillment_num)].value
-                            fulfillment_num += 1
-                        else:
-                            message.text.text = message.text.text[:j]
-                            break
-                    for j in range(fulfillment_num, 999):
-                        if route_sheet["B{}".format(j)].value:
-                            message.text.text.append(route_sheet["B{}".format(j)].value)
-                        else:
-                            break
+    async for page in pages:
+        if page.transition_route_groups:
+            for route_group_name in page.transition_route_groups:
+                route_group = await get_route_group(route_group_name)
+                for route in route_group.transition_routes:
+                    route_num = await find_route_num(workbook, ref_sheet, route.name)
+                    route_sheet = workbook[str(route_num)]
+                    await update_route(route, route_sheet)
+                await update_route_group(route_group)
+        if page.transition_routes:
+            for route in page.transition_routes:
+                route_num = await find_route_num(workbook, ref_sheet, route.name)
+                route_sheet = workbook[str(route_num)]
+                await update_route(route, route_sheet)
+        await update_page(page)
+
+async def find_route_num(workbook, ref_sheet, route_name):
+    for i in range(1, len(workbook.sheetnames)):
+        if route_name == ref_sheet["B{}".format(i)].value:
+            return i
+
+async def update_route(route, route_sheet):
+    for message in route.trigger_fulfillment.messages:
+        fulfillment_num = 1
+        for j in range(len(message.text.text)):
+            if route_sheet["B{}".format(fulfillment_num)].value:
+                message.text.text[j] = route_sheet["B{}".format(fulfillment_num)].value
+                fulfillment_num += 1
+            else:
+                message.text.text = message.text.text[:j]
                 break
-        client = dialogflowcx_v3.TransitionRouteGroupsAsyncClient(client_options={"api_endpoint": ENDPOINT})
-        request = dialogflowcx_v3.UpdateTransitionRouteGroupRequest(transition_route_group=route_group)
-        response = await client.update_transition_route_group(request=request)
+        for j in range(fulfillment_num, 999):
+            if route_sheet["B{}".format(j)].value:
+                message.text.text.append(route_sheet["B{}".format(j)].value)
+            else:
+                break
 
 async def main():
     variant_name = await create_variant()
     ref_content = await export_reference()
     await restore_reference(variant_name, ref_content)
-    route_groups = await get_route_groups(variant_name)
-    await update_variant(route_groups)
+    pages = await get_pages("{}/flows/00000000-0000-0000-0000-000000000000".format(variant_name))
+    await update_variant(pages)
 
 if __name__ == '__main__':
     asyncio.run(main())
