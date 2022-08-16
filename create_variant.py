@@ -4,11 +4,13 @@ from utils import *
 import asyncio
 import time
 
+# to change: change C column to B column in update
+
 # export GOOGLE_APPLICATION_CREDENTIALS="heartschat-prod-a505-9599eda00cef.json"
 
-ROUTE_MAP = "route_map_07-10-2022_22-11-25.xlsx"
+ROUTE_MAP = "route_map_07-13-2022_00-47-11.xlsx"
 ENDPOINT = "us-central1-dialogflow.googleapis.com"
-VARIANT_NAME = "create_variant_test_1"
+VARIANT_NAME = "nlg_test_1"
 
 async def create_variant():
     agent = dialogflowcx_v3.Agent()
@@ -63,15 +65,15 @@ async def update_route(route, route_sheet):
     for message in route.trigger_fulfillment.messages:
         fulfillment_num = 1
         for j in range(len(message.text.text)):
-            if route_sheet["B{}".format(fulfillment_num)].value:
-                message.text.text[j] = route_sheet["B{}".format(fulfillment_num)].value
+            if route_sheet["C{}".format(fulfillment_num)].value:
+                message.text.text[j] = route_sheet["C{}".format(fulfillment_num)].value
                 fulfillment_num += 1
             else:
                 message.text.text = message.text.text[:j]
                 break
         for j in range(fulfillment_num, 999):
-            if route_sheet["B{}".format(j)].value:
-                message.text.text.append(route_sheet["B{}".format(j)].value)
+            if route_sheet["C{}".format(j)].value:
+                message.text.text.append(route_sheet["C{}".format(j)].value)
             else:
                 break
 
