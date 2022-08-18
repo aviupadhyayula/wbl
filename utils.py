@@ -14,6 +14,11 @@ async def get_intents(agent):
     intents = await client.list_intents(request=request)
     return intents
 
+async def update_intent(intent):
+    client = dialogflowcx_v3.IntentsAsyncClient(client_options={"api_endpoint": ENDPOINT})
+    request = dialogflowcx_v3.UpdateIntentRequest(intent=intent)
+    reesponse = await client.update_intent(request=request)
+
 async def get_route_group(route_group_name):
     client = dialogflowcx_v3.TransitionRouteGroupsAsyncClient(client_options={"api_endpoint": ENDPOINT})
     request = dialogflowcx_v3.GetTransitionRouteGroupRequest(name=route_group_name)

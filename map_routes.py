@@ -1,5 +1,4 @@
 from google.cloud import dialogflowcx_v3
-from paraphrase_text import *
 from utils import *
 from openpyxl import Workbook
 from datetime import datetime
@@ -7,13 +6,11 @@ import asyncio
 import string
 import time
 
-# to change: remove i = 1, comment out paraphrase import, and get rid of 64-69
-
-# export GOOGLE_APPLICATION_CREDENTIALS="heartschat-prod-a505-9599eda00cef.json"
+# export GOOGLE_APPLICATION_CREDENTIALS=""
 
 ALPHABET = list(string.ascii_uppercase)
 ENDPOINT = "us-central1-dialogflow.googleapis.com"
-AGENT = "projects/heartschat-prod-a505/locations/us-central1/agents/8b87e314-ec79-4386-9b5d-9347da0a0e23"
+AGENT = ""
 FLOW = "{}/flows/00000000-0000-0000-0000-000000000000".format(AGENT)
 
 route_num = 1
@@ -53,20 +50,12 @@ async def write_route(workbook, route, intents):
     ref_sheet["B{}".format(route_num)] = route.name
     routes_sheet["{}{}".format(ALPHABET[page_num], intent_num)].hyperlink = "#{}!A1".format(route_num)
     message_num = 1
-    para_num = 1
-    i = 1
     for message in route.trigger_fulfillment.messages:
         for text in message.text.text:
             route_sheet["B{}".format(message_num)] = text
             fulfillments_sheet["A{}".format(fulfillment_num)] = text
             message_num += 1
             fulfillment_num += 1
-            print(text)
-            paras = paraphrase(text)
-            for para in paras:
-                print(para)
-                route_sheet["C{}".format(i)] = para
-                i += 1
     if route.condition:
         routes_sheet["{}{}".format(ALPHABET[page_num], intent_num)] = route.condition
     if route.intent:
