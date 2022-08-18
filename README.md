@@ -22,7 +22,7 @@ Enables mass editing of a Dialogflow agent's dialog via an Excel spreadsheet. Wo
 
 ## prioritize_intent.py
 
-Prioritizes a given intent by setting its priority value to an inputted integer. See [intent priorities] (https://cloud.google.com/dialogflow/es/docs/intents-settings#priority).
+Prioritizes a given intent by setting its priority value to an inputted integer. See [intent priorities](https://cloud.google.com/dialogflow/es/docs/intents-settings#priority).
 
 ### To use:
 - Set the `INTENT` environment variable to the intent whose priority you'd like to change. The intent should be in the format `projects/.../locations/.../agents.../intents/...`.
