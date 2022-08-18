@@ -2,7 +2,7 @@
 
 ## map_routes.py
 
-Converts a Dialogflow agent's dialog taxonomy to an easily-viewable Excel spreadsheet. Works by using Google's [Dialogflow CX Python client](https://googleapis.dev/python/dialogflow-cx/latest/index.html) to scrape an agent's pages in a particular flow. It then creates a table of contents, with each route filed under a page. Viewing a route's page reveals the route's trigger (either its intent's training phrases, or its activation condition) and the agent's dialog responses.
+Converts a Dialogflow agent's dialog taxonomy to an easily-viewable Excel spreadsheet. Works by using Google's [Dialogflow CX Python client](https://googleapis.dev/python/dialogflow-cx/latest/index.html) to scrape an agent's pages in a particular flow.
 
 ### To use: 
 - Download a credentials file from the Google Cloud Platform console.
@@ -12,7 +12,7 @@ Converts a Dialogflow agent's dialog taxonomy to an easily-viewable Excel spread
 
 ## create_variant.py
 
-Enables mass editing of a Dialogflow agent's dialog via an Excel spreadsheet. Works by using a generated route map to parse changes to an agent's fulfillments and then uploading the new "variant" as a new agent.
+Enables mass editing of a Dialogflow agent's dialog via an Excel spreadsheet. Works by using a route map (see `map_routes.py`) to parse changes to an agent's fulfillments; then uploads the generated "variant" as a new Dialogflow agent.
 
 ### To use:
 - Run `map_routes.py` on an existing agent.
@@ -22,7 +22,7 @@ Enables mass editing of a Dialogflow agent's dialog via an Excel spreadsheet. Wo
 
 ## prioritize_intent.py
 
-Prioritizes a given intent by setting its priority value to an inputted integer. See [intent priorities](https://cloud.google.com/dialogflow/es/docs/intents-settings#priority).
+Prioritizes a given intent by setting its internal priority value to an inputted integer. See [intent priorities](https://cloud.google.com/dialogflow/es/docs/intents-settings#priority).
 
 ### To use:
 - Set the `INTENT` environment variable to the intent whose priority you'd like to change. The intent should be in the format `projects/.../locations/.../agents.../intents/...`
@@ -30,7 +30,7 @@ Prioritizes a given intent by setting its priority value to an inputted integer.
 
 ## sync_training.py
 
-Syncs training phrases for matching intents between two agents. Works by examining all common intents between a reference agent and a target agent, and then updating the target agent's intents' training phrases with the reference agent's.
+Syncs training phrases for matching intents between two agents. Works by examining all common intents between a reference agent and a target agent, and then updating the target agent's training phrases with the reference agent's.
 
 ### To use:
 - Set the `REFERENCE` environment variable to the agent whose training phrases you'd like to copy over. The content should be in the format `projects/.../locations/.../agents/...`
