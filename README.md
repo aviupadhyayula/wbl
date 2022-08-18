@@ -7,8 +7,8 @@ Converts a Dialogflow agent's dialog taxonomy to an easily-viewable Excel spread
 ### To use: 
 - Download a credentials file from the Google Cloud Platform console.
 - Run `export GOOGLE_APPLICATION_CREDENTIALS="<insert credentials here>"' in your terminal
-- Set the `AGENT` environment variable to the agent whose routes you'd like to map. The content should be in the format `projects/.../locations/.../agents/...`.
-- Set the `FLOW` environment variable to the specific flow whose pages you'd like to scrape the routes from. The content should be in the format `{}/flows/...`.
+- Set the `AGENT` environment variable to the agent whose routes you'd like to map. The content should be in the format `projects/.../locations/.../agents/...`
+- Set the `FLOW` environment variable to the specific flow whose pages you'd like to scrape the routes from. The content should be in the format `{}/flows/...`
 
 ## create_variant.py
 
@@ -25,7 +25,7 @@ Enables mass editing of a Dialogflow agent's dialog via an Excel spreadsheet. Wo
 Prioritizes a given intent by setting its priority value to an inputted integer. See [intent priorities](https://cloud.google.com/dialogflow/es/docs/intents-settings#priority).
 
 ### To use:
-- Set the `INTENT` environment variable to the intent whose priority you'd like to change. The intent should be in the format `projects/.../locations/.../agents.../intents/...`.
+- Set the `INTENT` environment variable to the intent whose priority you'd like to change. The intent should be in the format `projects/.../locations/.../agents.../intents/...`
 - Set the `NEW_PRIORITY` environment variable to the integer value you'd like.
 
 ## sync_training.py
@@ -33,5 +33,5 @@ Prioritizes a given intent by setting its priority value to an inputted integer.
 Syncs training phrases for matching intents between two agents. Works by examining all common intents between a reference agent and a target agent, and then updating the target agent's intents' training phrases with the reference agent's.
 
 ### To use:
-- Set the `REFERENCE` environment variable to the agent whose training phrases you'd like to copy over. The content should be in the format `projects/.../locations/.../agents/...`.
-- Set the `AGENT` environment variable to the agent whose training phrases you'd like to update. The content should be in the format `projects/.../locations/.../agents/...`.
+- Set the `REFERENCE` environment variable to the agent whose training phrases you'd like to copy over. The content should be in the format `projects/.../locations/.../agents/...`
+- Set the `AGENT` environment variable to the agent whose training phrases you'd like to update. The content should be in the format `projects/.../locations/.../agents/...`
