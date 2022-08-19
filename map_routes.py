@@ -6,13 +6,9 @@ import asyncio
 import string
 import time
 
-<<<<<<< HEAD
 # export GOOGLE_APPLICATION_CREDENTIALS="heartschat-prod-a505-9599eda00cef.json"
 # sassy = daa993a0-ac60-4bde-8b6b-6a42899b2329
 # normal = 8b87e314-ec79-4386-9b5d-9347da0a0e23
-=======
-# export GOOGLE_APPLICATION_CREDENTIALS=""
->>>>>>> 9e6469b1682b90651f54084db882a19d64d05638
 
 ALPHABET = list(string.ascii_uppercase)
 ENDPOINT = "us-central1-dialogflow.googleapis.com"
