@@ -1,10 +1,10 @@
 from google.cloud import dialogflowcx_v3
 import asyncio
 
-# export GOOGLE_APPLICATION_CREDENTIALS="heartschat-prod-a505-9599eda00cef.json"
+# export GOOGLE_APPLICATION_CREDENTIALS=""
 
 ENDPOINT = "us-central1-dialogflow.googleapis.com"
-INTENT = "projects/heartschat-prod-a505/locations/us-central1/agents/3eaf696f-5b7d-4e1e-b47c-5c9066d1dce9/intents/05977c52-e4f9-4a8b-a34e-80bfe3f036bd"
+INTENT = ""
 NEW_PRIORITY = 500000
 
 async def get_intent(intent_name):
