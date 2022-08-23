@@ -1,4 +1,4 @@
-# Scripts for the Wharton Behavioral Lab's Negotiation Bot Project 
+# Scripts for the Wharton Behavioral Lab's Negotiation Bot 
 
 ## map_routes.py
 
