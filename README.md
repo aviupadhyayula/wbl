@@ -35,3 +35,10 @@ Syncs training phrases for matching intents between two agents. Works by examini
 ### To use:
 - Set the `REFERENCE` environment variable to the agent whose training phrases you'd like to copy over. The content should be in the format `projects/.../locations/.../agents/...`
 - Set the `AGENT` environment variable to the agent whose training phrases you'd like to update. The content should be in the format `projects/.../locations/.../agents/...`
+
+## paraphrase_text.py
+
+Paraphrases input text using [Google Research's PEGASUS model](https://huggingface.co/docs/transformers/model_doc/pegasus). 
+
+### To use: 
+- Set `sentence` variable to an input sentence you'd like.
