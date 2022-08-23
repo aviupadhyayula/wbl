@@ -6,7 +6,7 @@ Converts a Dialogflow agent's dialog taxonomy to an easily-viewable Excel spread
 
 ### To use: 
 - Download a credentials file from the Google Cloud Platform console.
-- Run `export GOOGLE_APPLICATION_CREDENTIALS="<insert credentials here>"' in your terminal
+- Run `export GOOGLE_APPLICATION_CREDENTIALS="<insert credentials here>"` in your terminal
 - Set the `AGENT` environment variable to the agent whose routes you'd like to map. The content should be in the format `projects/.../locations/.../agents/...`
 - Set the `FLOW` environment variable to the specific flow whose pages you'd like to scrape the routes from. The content should be in the format `{}/flows/...`
 
